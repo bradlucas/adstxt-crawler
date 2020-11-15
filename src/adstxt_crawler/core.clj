@@ -1,8 +1,8 @@
-(ns ads-txt-crawler.core
+(ns adstxt-crawler.core
   (:require [clojure.tools.cli :refer [parse-opts]]
-            [ads-txt-crawler.crawl :as c]
-            [ads-txt-crawler.domains :as domains]
-            [ads-txt-crawler.database :as d]
+            [adstxt-crawler.crawl :as c]
+            [adstxt-crawler.domains :as domains]
+            [adstxt-crawler.database :as d]
             )
   (:gen-class))
 

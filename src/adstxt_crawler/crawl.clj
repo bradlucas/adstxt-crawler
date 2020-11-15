@@ -1,6 +1,6 @@
-(ns ads-txt-crawler.crawl
-  (:require [ads-txt-crawler.database :as d]
-            [ads-txt-crawler.httpkit :as h]))
+(ns adstxt-crawler.crawl
+  (:require [adstxt-crawler.database :as d]
+            [adstxt-crawler.httpkit :as h]))
 
 (defn clean
   "Clean values by trimming strings and return a blank string to prevent nils from printing"

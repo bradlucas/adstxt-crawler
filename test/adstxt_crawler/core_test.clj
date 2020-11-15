@@ -1,6 +1,6 @@
-(ns ads-txt-crawler.core-test
+(ns adstxt-crawler.core-test
   (:require [clojure.test :refer :all]
-            [ads-txt-crawler.core :refer :all]))
+            [adstxt-crawler.core :refer :all]))
 
 (deftest a-test
   (testing "FIXME, I fail."
