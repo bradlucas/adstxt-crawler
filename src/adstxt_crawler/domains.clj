@@ -1,4 +1,4 @@
-(ns ads-txt-crawler.domains
+(ns adstxt-crawler.domains
   (:require [clojurewerkz.urly.core :refer [url-like as-map]])
   (:gen-class))
 

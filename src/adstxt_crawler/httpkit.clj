@@ -1,4 +1,4 @@
-(ns ads-txt-crawler.httpkit
+(ns adstxt-crawler.httpkit
   (:require [org.httpkit.client :as http])
   (:import [java.net URI]
            [javax.net.ssl SNIHostName SNIServerName SSLEngine SSLParameters]))

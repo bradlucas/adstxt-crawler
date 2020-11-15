@@ -1,10 +1,10 @@
-# Ads-txt-crawler
+# adstxt-crawler
 
 An implementation of a crawler for Ads.txt files written in Clojure.
 
 ## Ads.txt Files
 
-IAB Tech Lab released a specification for Ads.txt files. See [https://iabtechlab.com/ads-txt/](https://iabtechlab.com/ads-txt/).
+IAB Tech Lab released a specification for Ads.txt files. See [https://iabtechlab.com/adstxt/](https://iabtechlab.com/adstxt/).
 
 Along with the specification they released a reference crawler written in Python. The repository for that project is [https://github.com/InteractiveAdvertisingBureau/adstxtcrawler](https://github.com/InteractiveAdvertisingBureau/adstxtcrawler).
 
@@ -23,13 +23,13 @@ $ lein uberjar
 
 To use this project as a library in a Clojure project add the following to your :dependencies
 
-   [com.bradlucas/ads-txt-crawler "0.0.8"]
+   [com.bradlucas/adstxt-crawler "0.0.8"]
 
 
 ## Command Line Usage
 
 ```
-$ java -jar ads-txt-crawler-standalone.jar [options] [domains]
+$ java -jar adstxt-crawler-standalone.jar [options] [domains]
 
 Options:
           -t FILE, --targets=FILE
@@ -70,7 +70,7 @@ $ sqlite3 database.db < ./sql/create.sql
 After building the project using `lein uberjar` pass the example `target-domains.txt` file included in the docs directory using the `-t` flag.
 
 ```
-$ java -jar ./target/uberjar/ads-txt-crawler-standalone.jar -t ./doc/target-domains.txt
+$ java -jar ./target/uberjar/adstxt-crawler-standalone.jar -t ./doc/target-domains.txt
 
 ```
 
@@ -79,7 +79,7 @@ For another larger example, see the file [./doc/top-100-programmatic-domains.txt
 To run this file you can either run the following command.
 
 ```
-$ java -jar ./target/uberjar/ads-txt-crawler-standalone.jar -t ./doc/top-100-programmatic-domains.txt >results.csv 2>err.log
+$ java -jar ./target/uberjar/adstxt-crawler-standalone.jar -t ./doc/top-100-programmatic-domains.txt >results.csv 2>err.log
 ```
 
 Or run the `run-100.sh` file in the scripts directory. The `run-100.sh` will process the results and produce a few summary files.
@@ -90,21 +90,21 @@ $ ./scripts/run-100.sh
 
 Lastly, for those who want to just see some results, you can visit the following repository which contains the output files from a recent Top 100 `run-100.sh` run.
 
-[https://github.com/bradlucas/top-100-domains-ads-txt](https://github.com/bradlucas/top-100-domains-ads-txt)
+[https://github.com/bradlucas/top-100-domains-adstxt](https://github.com/bradlucas/top-100-domains-adstxt)
 
 
 #### Saving to SQLite database
 
-Create your initial database using the following command. Here I'll create a database called ads-txt.db
+Create your initial database using the following command. Here I'll create a database called adstxt.db
 
 ```
-$ sqlite3 ads-txt.db < ./sql/create.sql
+$ sqlite3 adstxt.db < ./sql/create.sql
 ```
 
 Then to run the Topp 100 domains as an example use the following command.
 
 ```
-$ java -jar ./target/uberjar/ads-txt-crawler-standalone.jar -t ./doc/top-100-programmatic-domains.txt -d ads-txt.db
+$ java -jar ./target/uberjar/adstxt-crawler-standalone.jar -t ./doc/top-100-programmatic-domains.txt -d adstxt.db
 ```
 
 You'll notice that your errors will still show but the data will be saved into the database.
@@ -112,7 +112,7 @@ You'll notice that your errors will still show but the data will be saved into t
 To verify the database you can dump the table with the following command.
 
 ```
-$ echo 'select * from adstxt;' | sqlite3 ads-txt.db
+$ echo 'select * from adstxt;' | sqlite3 adstxt.db
 ```
 
 Also, you can open the database with `sqlite3`.
@@ -120,7 +120,7 @@ Also, you can open the database with `sqlite3`.
 #### Passing domains on the command line
 
 ```
-$ java -jar ./target/uberjar/ads-txt-crawler-standalone.jar washingtonpost.com ibm.com businessinsider.com
+$ java -jar ./target/uberjar/adstxt-crawler-standalone.jar washingtonpost.com ibm.com businessinsider.com
 ```
 
 ## Notes

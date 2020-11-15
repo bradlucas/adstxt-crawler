@@ -1,4 +1,4 @@
-(ns ads-txt-crawler.database
+(ns adstxt-crawler.database
   (:require [clojure.java.jdbc :as jdbc]))
 
 
