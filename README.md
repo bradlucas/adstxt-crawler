@@ -1,5 +1,7 @@
 # adstxt-crawler
 
+[![Clojars Project](https://img.shields.io/clojars/v/com.bradlucas/ads-txt-crawler.svg)](https://clojars.org/com.bradlucas/ads-txt-crawler)
+
 An implementation of a crawler for Ads.txt files written in Clojure.
 
 ## Ads.txt Files
